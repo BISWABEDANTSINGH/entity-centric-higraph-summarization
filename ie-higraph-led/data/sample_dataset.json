@@ -1,0 +1,32 @@
+[
+  {
+    "cluster_id": "cluster_001",
+    "domain": "politics",
+    "documents": [
+      "The Prime Minister met with international leaders to discuss climate policy reforms. The summit focused on renewable energy investments and carbon neutrality targets.",
+      "During the climate summit, several countries pledged increased funding toward green energy projects. The Prime Minister emphasized global cooperation.",
+      "Experts noted that the agreements reached at the summit could accelerate renewable energy adoption worldwide."
+    ],
+    "summary": "The Prime Minister and international leaders agreed to strengthen renewable energy investments and accelerate global cooperation on climate policy reforms during the summit."
+  },
+  {
+    "cluster_id": "cluster_002",
+    "domain": "disaster",
+    "documents": [
+      "A powerful earthquake struck the coastal region early Monday morning, causing significant infrastructure damage.",
+      "Officials reported varying casualty numbers, with early estimates suggesting over 200 injuries.",
+      "Rescue teams have been deployed across affected districts to assist survivors and restore essential services."
+    ],
+    "summary": "A major earthquake caused widespread infrastructure damage and injuries, prompting large-scale rescue and recovery operations."
+  },
+  {
+    "cluster_id": "cluster_003",
+    "domain": "technology",
+    "documents": [
+      "A leading tech company unveiled its latest artificial intelligence chip designed for large-scale data processing.",
+      "The new processor improves energy efficiency and accelerates deep learning model training.",
+      "Industry analysts predict the innovation could significantly impact AI research and enterprise applications."
+    ],
+    "summary": "A new AI chip promises improved energy efficiency and faster deep learning training, potentially transforming enterprise and research applications."
+  }
+]

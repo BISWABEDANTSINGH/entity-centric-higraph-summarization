@@ -1,0 +1,82 @@
+# ==============================
+# IE-HiGraph-LED Configuration
+# ==============================
+
+experiment:
+  name: "ie_higraph_led_experiment"
+  seed: 42
+  output_dir: "./outputs"
+
+# ------------------------------
+# Model Configuration
+# ------------------------------
+model:
+  base_model: "allenai/led-base-16384"
+  max_input_length: 4096
+  max_summary_length: 512
+  num_beams: 4
+  entity_hidden_size: 768
+  graph_heads: 8
+  graph_layers: 2
+  use_entity_mask: true
+
+# ------------------------------
+# Training Configuration
+# ------------------------------
+training:
+  num_train_epochs: 3
+  train_batch_size: 1
+  eval_batch_size: 1
+  learning_rate: 3e-5
+  weight_decay: 0.01
+  warmup_steps: 500
+  gradient_accumulation_steps: 4
+  fp16: true
+  logging_steps: 100
+  save_steps: 1000
+  evaluation_strategy: "steps"
+
+# ------------------------------
+# Graph Settings
+# ------------------------------
+graph:
+  centrality_normalization: "max"
+  entropy_regularization: 0.01
+  attention_dropout: 0.1
+
+# ------------------------------
+# Evaluation Settings
+# ------------------------------
+evaluation:
+  metrics:
+    - rouge1
+    - rouge2
+    - rouge3
+    - rougeL
+    - bertscore
+  use_stemmer: true
+  language: "en"
+
+# ------------------------------
+# Benchmark Models
+# ------------------------------
+benchmarks:
+  baseline_models:
+    - "facebook/bart-large-cnn"
+    - "google/pegasus-cnn_dailymail"
+    - "t5-large"
+    - "allenai/led-base-16384"
+    - "google/flan-t5-large"
+    - "facebook/bart-large"
+    - "t5-base"
+    - "google/mt5-large"
+    - "google/long-t5-tglobal-base"
+    - "mistralai/Mixtral-8x7B-Instruct"
+
+# ------------------------------
+# Dataset Configuration
+# ------------------------------
+dataset:
+  path: "./data/sample_dataset.json"
+  max_documents_per_cluster: 5
+  shuffle: true

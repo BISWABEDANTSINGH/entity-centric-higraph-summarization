@@ -1,0 +1,11 @@
+torch
+transformers
+datasets
+evaluate
+bert-score
+scikit-learn
+networkx
+spacy
+tqdm
+rouge-score
+pyyaml
